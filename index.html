@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Linear Programming</h1>
+        <form id="linearForm">
+            <h2>Fungsi Tujuan (Max Z = c1*A + c2*B)</h2>
+            <label>Koefisien A (c1):</label>
+            <input type="number" id="zA" placeholder="e.g. 40000" required>
+            <label>Koefisien B (c2):</label>
+            <input type="number" id="zB" placeholder="e.g. 20000" required>
+
+            <h2>Kendala 1</h2>
+            <label>Koefisien A:</label>
+            <input type="number" id="c1A" placeholder="e.g. 4" required>
+            <label>Koefisien B:</label>
+            <input type="number" id="c1B" placeholder="e.g. 2" required>
+            <label>Batasan (<=):</label>
+            <input type="number" id="c1Limit" placeholder="e.g. 60" required>
+
+            <h2>Kendala 2</h2>
+            <label>Koefisien A:</label>
+            <input type="number" id="c2A" placeholder="e.g. 3" required>
+            <label>Koefisien B:</label>
+            <input type="number" id="c2B" placeholder="e.g. 3" required>
+            <label>Batasan (<=):</label>
+            <input type="number" id="c2Limit" placeholder="e.g. 48" required>
+
+            <button type="button" id="calculateBtn">Hitung dan Tampilkan Grafik</button>
+        </form>
+
+        <!-- Penyelesaian dan Hasil -->
+        <div id="steps"></div>
+        <canvas id="feasibleChart" width="400" height="400"></canvas>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
